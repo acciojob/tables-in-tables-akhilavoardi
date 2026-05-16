@@ -2,40 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nested HTML Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in Tables</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .black-cell {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 
-<table border="1" cellpadding="10" cellspacing="0" width="100%">
-
-    <!-- Main Header -->
+<table>
     <tr>
-        <th colspan="2">Nested Tables</th>
+        <th colspan="2">Main Table</th>
     </tr>
 
-    <!-- First Row -->
     <tr>
+        <!-- Nested Table 1 -->
         <td>
-
-            <!-- Nested Table 1 -->
-            <table border="1" cellpadding="5" cellspacing="0" width="100%">
+            <table>
                 <tr>
-                    <th>Nested Table 1</th>
+                    <th colspan="2">Nested Table 1</th>
                 </tr>
                 <tr>
-                    <td>Cell 1</td>
+                    <td>Row 1</td>
+                    <td>Row 2</td>
                 </tr>
                 <tr>
-                    <td>Cell 2</td>
+                    <td class="black-cell">HTML</td>
+                    <td>CSS</td>
                 </tr>
             </table>
-
         </td>
 
+        <!-- Nested Table 2 -->
         <td>
-
-            <!-- Nested Table 2 -->
-            <table border="1" cellpadding="5" cellspacing="0" width="100%">
+            <table>
                 <tr>
                     <th colspan="2">Nested Table 2</th>
                 </tr>
@@ -48,16 +70,13 @@
                     <td>Data 2</td>
                 </tr>
             </table>
-
         </td>
     </tr>
 
-    <!-- Second Row -->
     <tr>
+        <!-- Nested Table 3 -->
         <td>
-
-            <!-- Nested Table 3 -->
-            <table border="1" cellpadding="5" cellspacing="0" width="100%">
+            <table>
                 <tr>
                     <th>Nested Table 3</th>
                 </tr>
@@ -71,26 +90,25 @@
                     </td>
                 </tr>
             </table>
-
         </td>
 
+        <!-- Nested Table 4 -->
         <td>
-
-            <!-- Nested Table 4 -->
-            <table border="1" cellpadding="5" cellspacing="0" width="100%">
+            <table>
                 <tr>
-                    <th>Nested Table 4</th>
+                    <th colspan="2">Nested Table 4</th>
                 </tr>
                 <tr>
-                    <td style="background-color:black; color:white; text-align:center;">
-                        HTML
-                    </td>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
                 </tr>
             </table>
-
         </td>
     </tr>
-
 </table>
 
 </body>
